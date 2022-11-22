@@ -1,0 +1,137 @@
+:root {
+  --clr-text: #fff;
+  --clr-bg-dark: #242424;
+  --clr-bg-light: #3b3b3b;
+  --clr-accent: #ff7600;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: var(--clr-text);
+  background-color: var(--clr-bg-dark);
+  border: 1px solid red;
+  overflow: hidden;
+}
+
+header {
+  margin: 2em 1em;
+  display: flex;
+  gap: 2.4rem;
+}
+.container {
+  border: 1px solid red;
+  width: 100%;
+  min-height: 7.2rem;
+  background-color: var(--clr-bg-light);
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 8rem;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  gap: 1.2em;
+  margin-left: 2.4em;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--clr-text);
+  padding: 0.6em 0.8em;
+  background-color: var(--clr-bg-dark);
+  border-radius: 9px;
+  font-size: clump(1rem, 1.2rem, 1rem);
+  text-align: center;
+  transition: ease-in-out 0.25s;
+}
+
+.nav__link:hover {
+  color: var(--clr-bg-dark);
+  background-color: var(--clr-text);
+  /* transition: transform ease-in-out 0.6s; */
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hamburger {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin: 0em 2.4em;
+    display: block;
+    align-self: center;
+  }
+
+  .menu-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    stroke: #ff7600;
+  }
+
+  .nav__link {
+    display: none;
+  }
+
+  .menu {
+    width: 100%; /* min-height: fit-content; */
+    color: #ff7600;
+    display: inline-block;
+  }
+}
+
+.menu {
+  width: 100%;
+  /* min-height: fit-content; */
+  color: #ff7600;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.show-items {
+  visibility: visible;
+  transition: all ease-in-out 0.6s;
+}
+
+.menu-item {
+  font-size: 1.2rem;
+  padding: 1em;
+  max-width: 100%;
+  /* visibility: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-text);
+  background-color: var(--clr-accent);
+  border: 1px solid rgb(0, 0, 0);
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
+
+.menu-item:hover {
+  background-color: var(--clr-text);
+  color: var(--clr-bg-light);
+}
