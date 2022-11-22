@@ -22,7 +22,7 @@ body {
   line-height: 1.5;
   color: var(--clr-text);
   background-color: var(--clr-bg-dark);
-  border: 1px solid red;
+
   overflow: hidden;
 }
 
@@ -32,7 +32,6 @@ header {
   gap: 2.4rem;
 }
 .container {
-  border: 1px solid red;
   width: 100%;
   min-height: 7.2rem;
   background-color: var(--clr-bg-light);
